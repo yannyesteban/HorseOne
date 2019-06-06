@@ -28,7 +28,7 @@ set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -u ANativeActivity_o
 
 
 add_library( native-lib   SHARED         native-lib.cpp)
-#add_library( maxbox   SHARED         horse.cpp)
+add_library( maxbox   SHARED         horse.cpp)
 
 add_library( # Sets the name of the library.
         horse
@@ -79,6 +79,26 @@ target_link_libraries( # Specifies the target library.
         #maxbox
 
         horse
+        android
+        native_app_glue
+        native-lib
+        EGL
+        GLESv2
+        #
+
+        ${log-lib}
+
+
+
+        # Links the target library to the log library
+        # included in the NDK.
+        )
+target_link_libraries( # Specifies the target library.
+
+
+        maxbox
+
+        #horse
         android
         native_app_glue
         native-lib

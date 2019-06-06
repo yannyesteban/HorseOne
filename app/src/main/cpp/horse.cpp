@@ -7,7 +7,8 @@
 
 #include <android/sensor.h>
 #include <android/log.h>
-#include "C:\sdk\ndk-bundle\sources\android\native_app_glue\android_native_app_glue.h"
+//#include "C:\sdk\ndk-bundle\sources\android\native_app_glue\android_native_app_glue.h"
+#include <android_native_app_glue.h>
 #include <cstring>
 
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "native-activity", __VA_ARGS__))

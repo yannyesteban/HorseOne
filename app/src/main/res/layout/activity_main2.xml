@@ -11,12 +11,14 @@
         android:layout_width="147dp"
         android:layout_height="48dp"
         android:text="Holaaaaaaaaaa"
-         />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="64dp" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:text="Boton 2"
-         />
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="153dp" />
 </android.support.constraint.ConstraintLayout>

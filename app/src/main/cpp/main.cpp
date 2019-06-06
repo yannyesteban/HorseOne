@@ -7,8 +7,8 @@
 
 #include <android/sensor.h>
 #include <android/log.h>
-#include "C:\sdk\ndk-bundle\sources\android\native_app_glue\android_native_app_glue.h"
-//#include <android_native_app_glue.h>
+//#include "C:\sdk\ndk-bundle\sources\android\native_app_glue\android_native_app_glue.h"
+#include <android_native_app_glue.h>
 #include <cstring>
 
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "native-activity", __VA_ARGS__))
@@ -110,7 +110,7 @@ void draw_frame(struct engine* engine) {
         return;
     }
 
-    glClearColor(0,100,80, 1);
+    glClearColor(100,0,0, 1);
     glClear(GL_COLOR_BUFFER_BIT);
     eglSwapBuffers(engine->display, engine->surface);
 }
