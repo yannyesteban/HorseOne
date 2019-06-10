@@ -9,14 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="android.app.NativeActivity"
+        <activity
+            android:name=".pro"
+            android:label="@string/title_activity_pro"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="com.stable.horseone.pro5" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name="android.app.NativeActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="maxbox" />
-
-
         </activity>
         <activity android:name=".Main2Activity">
             <intent-filter>
@@ -33,7 +44,15 @@
                 android:name="android.app.lib_name"
                 android:value="horse" />
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.stable.horseone.MainActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

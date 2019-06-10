@@ -36,7 +36,16 @@ public class Main2Activity extends AppCompatActivity {
                 startActivity(Song_detail);
             }
         });
+        Button boton7 = findViewById(R.id.button7);
+        boton7.setText("Siete");
 
+        boton7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Song_detail = new Intent(getApplicationContext(), com.stable.horseone.pro.class);
+                startActivity(Song_detail);
+            }
+        });
 
     }
 }
