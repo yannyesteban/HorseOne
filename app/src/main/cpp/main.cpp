@@ -17,7 +17,7 @@
 
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "native-activity", __VA_ARGS__))
 #define LOGW(...) ((void)__android_log_print(ANDROID_LOG_WARN, "native-activity", __VA_ARGS__))
-
+#define LOGE(...) ((void)__android_log_print(ANDROID_LOG_ERROR, "native-activity", __VA_ARGS__))
 struct engine {
     struct android_app* app;
 
@@ -156,6 +156,8 @@ void Draw(struct engine* engine)
 // Clear the color buffer
     glClear(GL_COLOR_BUFFER_BIT);
 // Use the program object
+
+    LOGE("programa:::: %d", engine->programObject);
     glUseProgram(engine->programObject);
 // Load the vertex data
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, vVertices);
